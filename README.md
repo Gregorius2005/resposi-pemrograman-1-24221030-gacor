@@ -1,19 +1,11 @@
-# 🎈 Blank app template
+panjang = st.number_input("Masukan panjang persegi", value=0)
+st.write("The current number is ", panjang)
 
-A simple Streamlit app template for you to modify!
+lebar = st.number_input("Masukan lebar persegi", value=0)
+st.write("The current number is ", lebar)
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://blank-app-template.streamlit.app/)
-
-### How to run it on your own machine
-
-1. Install the requirements
-
-   ```
-   $ pip install -r requirements.txt
-   ```
-
-2. Run the app
-
-   ```
-   $ streamlit run streamlit_app.py
-   ```
+if (panjang & lebar):
+    st.subheader('Keliling')
+    st.write(2 * (panjang + lebar))
+    st.subheader('Luas')
+    st.write( panjang * lebar)
